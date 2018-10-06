@@ -1,7 +1,15 @@
-$orange: #EE4D3C;
+$orange: #ee4d3c;
 $blue: cyan;
 
 @font-face {
   font-family: 'bebas_neueregular';
-  src: url("fonts/BebasNeueRegular.otf");
+  src: url('fonts/BebasNeueRegular.otf');
+}@font-face {
+  font-family: 'bebas_bold';
+  src: url('fonts/BebasNeueBold.otf');
+}
+
+@font-face {
+    font-family: 'georgia';
+    src: url('fonts/Georgia.ttf');
 }

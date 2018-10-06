@@ -1,0 +1,89 @@
+@import '../assets/global.scss';
+
+.bg-image {
+  background-image: url(https://jeffwalker.com/wp-content/uploads/2014/06/JEFF_Website_MainImages_Home_BackgroundPic.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  margin: 0 auto;
+  height: 572px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  flex: 1;
+  @include media(tiny) {
+    width: 100%;
+    flex-direction: column;
+  }
+  @include media(small) {
+    width: 400px;
+  }
+  @include media(medium) {
+    width: 600px;
+  }
+  @include media(large) {
+    width: 880px;
+  }
+  @include media(xlarge) {
+    width: 1100px;
+  }
+}
+
+.featured-section {
+  font-family: 'bebas_bold';
+  font-size: 40px;
+  background-color: rgba(34, 30, 31, 0.8);
+  color: #fff;
+  text-transform: uppercase;
+  padding-left: 26px;
+  padding-top: 10px;
+}
+
+.topper {
+  font-family: 'bebas_bold';
+}
+
+.special-feature-box {
+  margin-left: 80px;
+  box-shadow: -5px 5px 0px rgba(105, 105, 105, 0.25);
+  .topper {
+    background-color: #b7d9d4;
+  }
+  .lower {
+    background: rgba(255, 255, 255, 0.67);
+    text-align: center;
+  }
+}
+
+.topper h2 {
+  background-color: transparent;
+  color: #404041;
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px 0 8px 0;
+}
+
+.topper h2 span {
+  color: #ef4d3b;
+}
+
+.topper h3 {
+  text-align: center;
+  color: #fff;
+  text-shadow: -2px 3px 0px rgba(0, 0, 0, 0.4);
+  font-size: 40px;
+  background: url('https://jeffwalker.com/wp-content/themes/salient-child/img/single-white-pixel.png') repeat-x center
+    left;
+  margin: 0;
+  line-height: 44px;
+}
+
+.topper h3 span {
+  background: #b7d9d4;
+  padding: 0 10px;
+}
