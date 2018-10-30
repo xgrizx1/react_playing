@@ -7,12 +7,8 @@ import MenuItem from './Common/MenuItem';
 const arr = [
   { name: 'Home', onClick: () => {} },
   { name: 'About', onClick: () => {} },
-  { name: 'Books', onClick: () => {} },
-  { name: 'Videos', onClick: () => {} },
   { name: 'Programs', onClick: () => {} },
-  { name: 'Blogs', onClick: () => {} },
-  { name: 'Podcasts', onClick: () => {} },
-  { name: 'Contact', onClick: () => {} },
+  { name: 'Contact Us', onClick: () => {} },
 ];
 
 const Header = () => (

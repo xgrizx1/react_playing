@@ -17,10 +17,10 @@
 }
 
 .App-header {
-  background-color: black;
+  background-color: white;
   height: 100px;
   width: 100%;
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -31,24 +31,26 @@
 }
 
 .App-header-logo {
+  font-family: 'bebas_neueregular';
   padding-left: 10%;
   padding-right: 100px;
   display: flex;
+  color: $grey;
   flex-direction: row;
   letter-spacing: 1px;
-  font-size: 32px;
+  font-size: 50px;
+  padding-top: 10px;
   font-weight: 600;
-  font-family: 'bebas_neueregular';
+
   .subtext {
-    color: $orange;
+    color: $blue-theme;
     padding-left: 5px;
   }
 }
 
 .App-header-menu-item {
-  color: white;
+  color: $light-grey;
   font-weight: 200;
-  opacity: 0.6;
   font-size: 14px;
   display: inline-block;
   text-transform: uppercase;
@@ -57,17 +59,18 @@
 }
 
 .App-header-menu-item:hover {
-  color: cyan;
+  color: $blue-theme;
 }
 
 .App-header-toolbar {
-  min-width: 750px;
+  min-width: 500px;
   display: flex;
   flex-direction: row;
   overflow: visible !important;
   transition: padding 0.8s ease, margin 0.25s ease;
   min-height: 1px;
   line-height: 1px;
+  padding-left: 250px;
 }
 
 .App-link {
@@ -105,7 +108,7 @@
   font-family: 'bebas_neueregular';
   line-height: 30px;
   padding: 7px 7px 0 0;
-  border-bottom: 1px solid $orange;
+  border-bottom: 1px solid $blue;
 }
 
 .footer-link {

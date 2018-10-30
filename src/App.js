@@ -9,9 +9,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header/>
-                <div style={{marginBottom: 90}} />
                 <Home/>
-                <Footer/>
             </div>
         );
     }

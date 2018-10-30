@@ -9,7 +9,7 @@
       @content;
     }
   }
-  @else if $type == large {
+  @else if $type == medium {
     @media only screen and (min-width: 999px) and (max-width: 768px) {
       @content;
     }

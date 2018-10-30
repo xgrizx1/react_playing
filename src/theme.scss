@@ -1,15 +1,110 @@
-$orange: #ee4d3c;
-$blue: cyan;
+$blue-theme: #005E9F;
+$grey: #666666;
+$light-grey: #737d80;
+$orange: #f9a300;
+
+@import './assets/colors.scss';
+@import './assets/media.scss';
+
+p {
+  font-size: 1.2em;
+  letter-spacing: 0.01rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333333;
+}
+
+@mixin font_props($size, $height, $spacing) {
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@font-face {
+  font-family: 'proxima';
+  src: url('~/fonts/ProximaNova.ttf');
+}
+
+@font-face {
+  font-family: 'proxima-bold';
+  src: url('~/fonts/ProximaNova-Bold.ttf');
+}
+
+@mixin proxima($size, $height:1, $spacing:normal) {
+  font-family: 'proxima', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include font_props($size, $height, $spacing);
+}
+
+@mixin proximaBold($size, $height:1, $spacing:normal) {
+  font-family: 'proxima-bold', sans-serif;
+  font-weight: 600;
+
+  @include font_props($size, $height, $spacing);
+}
 
 @font-face {
   font-family: 'bebas_neueregular';
-  src: url('fonts/BebasNeueRegular.otf');
-}@font-face {
-  font-family: 'bebas_bold';
-  src: url('fonts/BebasNeueBold.otf');
+  src: url('~/fonts/BebasNeueRegular.otf');
 }
 
 @font-face {
-    font-family: 'georgia';
-    src: url('fonts/Georgia.ttf');
+  font-family: 'bebas_bold';
+  src: url('~/fonts/BebasNeueBold.otf');
 }
+
+@font-face {
+  font-family: 'georgia';
+  src: url('~/fonts/Georgia.ttf');
+}
+
+.button {
+  background-color: #f9a300;
+  color: #fff;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 9px 13px 10px;
+  width: 100%;
+  min-height: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: #f9a300;
+    background-color: #fff;
+  }
+}
+
+.button-inverse {
+  color: #f9a300;
+  cursor: pointer;
+  background-color: #fff;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 9px 13px 10px;
+  width: 100%;
+  min-height: 40px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #f9a300;
+    color: #fff;
+  }
+}
+
+input::placeholder,
+input::-webkit-input-placeholder,
+input::-ms-input-placeholder,
+input::-moz-placeholder {
+  margin: 8px;
+  font-size: 14px;
+  color: $light-grey;
+  opacity: 0.6;
+}
+
+
