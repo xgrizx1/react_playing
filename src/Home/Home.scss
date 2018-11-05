@@ -13,7 +13,7 @@
 .home {
   position: relative;
   width: 100%;
-  height: 100%;
+  margin-bottom: 100px;
 
   @include media(xlarge) {
     padding: 0 150px;
@@ -40,9 +40,6 @@
     justify-content: flex-start;
     align-items: center;
 
-    @include media(medium) {
-      flex-direction: column;
-    }
 
     .book-img {
       float: left;
@@ -75,9 +72,6 @@
         align-items: center;
         justify-content: flex-start;
 
-        @include media(medium) {
-          flex-direction: column;
-        }
 
         .form-button {
           margin: 4px;
@@ -97,29 +91,13 @@
 }
 
 .meet-jeff-container {
+  margin-bottom: 100px;
   background-repeat: no-repeat;
   background-color: white;
   background-position: bottom center;
   z-index: 0;
-  padding: 100px 40px;
+  padding: 0 40px;
 
-  @include media(xlarge) {
-    padding: 100px 180px;
-    background: url("https://jeffwalker.com/wp-content/uploads/2018/04/meetjeffimg.jpg");
-    background-repeat: no-repeat;
-    background-color: white;
-    background-position: bottom center;
-  }
-
-  @include media(large) {
-    padding: 100px 70px;
-    background: url("https://jeffwalker.com/wp-content/uploads/2018/04/meetjeffimg.jpg");
-    background-repeat: no-repeat;
-    background-color: white;
-    background-position: bottom center;
-  }
-  min-height: 1120px;
-  height: 100%;
   width: 100%;
   position: relative;
 
@@ -127,24 +105,34 @@
     font-weight: 500;
     font-size: 18px;
     text-transform: none;
-
+    margin-bottom: 50px;
   }
 
   .meet-jeff {
     padding-top: 50px;
 
     @include media(xlarge) {
-      padding-top: 150px;
+      padding-top: 50px;
       width: 500px;
     }
 
     @include media(large) {
-      padding-top: 150px;
+      padding-top: 50px;
       width: 400px;
     }
 
     @include media(medium) {
-      padding-top: 150px;
+      padding-top: 50px;
+    }
+
+    @include media (small) {
+      text-align: center;
+      width: 100%;
+    }
+
+    @include media (tiny) {
+      text-align: center;
+      width: 100%;
     }
 
     float: left;
@@ -170,33 +158,94 @@
 
     .first-text {
       @include media(xlarge) {
-        font-size: 16px;
+        // font-size: 16px;
       }
-      font-size: 14px;
       font-weight: bold;
-      padding-bottom: 50px;
+      @extend %text;
     }
 
     .second-text {
       @include media(xlarge) {
         font-size: 16px;
       }
-      font-size: 14px;
-      padding-bottom: 50px;
+      @extend %text;
     }
 
     .button-container {
-      width: 400px;
+      width: 250px;
       text-align: center;
+      @include media(medium) {
+        font-size: 12px;
+      }
+      @include media(small) {
+        font-size: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include media(tiny) {
+        font-size: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
   .jeff-img {
-      width: 100%;
+      width: 90%;
+      @extend %center-horizontally;
+      display: block;
       @include media(large) {
-        display: none;
+        width: 60%;
+        max-width: 300px;
       }
       @include media(xlarge) {
-        display: none;
+        width: 60%;
+        max-width: 300px;
+      }
+      @include media(medium) {
+        width: 80%;
+      }
+      @include media(small) {
+        width: 50%;
+      }
+      @include media(tiny) {
+        width: 80%;
       }
     }
 }
+
+.top-videos {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  color: $black;
+
+  @include media (xlarge) {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+
+  @include media (large) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  h3 {
+    text-align: center;
+    padding-bottom: 30px;
+    @include proxima(24px);
+    color: $black;
+    text-transform: none;
+  }
+
+  p {
+    text-align: center;
+    @extend %text;
+    @include media(xlarge) {
+      font-size: 16px;
+    }
+  }
+}
+
+.video-card {
+    margin-bottom: 15px;
+  }

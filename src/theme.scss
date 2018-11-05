@@ -1,5 +1,6 @@
 $blue-theme: #005E9F;
 $grey: #666666;
+$black: #34373a;
 $light-grey: #737d80;
 $orange: #f9a300;
 
@@ -63,7 +64,7 @@ p {
   background-color: #f9a300;
   color: #fff;
   font-family: "Montserrat", Sans-serif;
-  font-size: 14px;
+  font-size: inherit;
   font-weight: 700;
   border-radius: 0;
   padding: 9px 13px 10px;
@@ -83,7 +84,7 @@ p {
   cursor: pointer;
   background-color: #fff;
   font-family: "Montserrat", Sans-serif;
-  font-size: 14px;
+  font-size: inherit;
   font-weight: 700;
   border-radius: 0;
   padding: 9px 13px 10px;
@@ -105,6 +106,16 @@ input::-moz-placeholder {
   font-size: 14px;
   color: $light-grey;
   opacity: 0.6;
+}
+
+%center-horizontally {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%text {
+  font-size: 14px;
+  padding-bottom: 25px;
 }
 
 
