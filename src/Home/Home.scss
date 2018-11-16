@@ -40,7 +40,6 @@
     justify-content: flex-start;
     align-items: center;
 
-
     .book-img {
       float: left;
       width: 140px;
@@ -72,18 +71,14 @@
         align-items: center;
         justify-content: flex-start;
 
-
-        .form-button {
-          margin: 4px;
-          width: 280px;
+        @include media(medium) {
+          flex-direction: row;
         }
-
-        .form-field {
-          input {
-            width: 280px;
-            height: 40px;
-            margin: 4px;
-          }
+        @include media(small) {
+          flex-direction: column;
+        }
+        @include media(tiny) {
+          flex-direction: column;
         }
       }
     }
@@ -190,34 +185,34 @@
     }
   }
   .jeff-img {
-      width: 90%;
-      @extend %center-horizontally;
-      display: block;
-      @include media(large) {
-        width: 60%;
-        max-width: 300px;
-      }
-      @include media(xlarge) {
-        width: 60%;
-        max-width: 300px;
-      }
-      @include media(medium) {
-        width: 80%;
-      }
-      @include media(small) {
-        width: 50%;
-      }
-      @include media(tiny) {
-        width: 80%;
-      }
+    width: 90%;
+    @extend %center-horizontally;
+    display: block;
+    @include media(large) {
+      width: 60%;
+      max-width: 300px;
     }
+    @include media(xlarge) {
+      width: 60%;
+      max-width: 300px;
+    }
+    @include media(medium) {
+      width: 80%;
+    }
+    @include media(small) {
+      width: 50%;
+    }
+    @include media(tiny) {
+      width: 80%;
+    }
+  }
 }
 
 .top-videos {
   width: 100%;
-  height: 100%;
   padding: 0 40px;
   color: $black;
+  position: relative;
 
   @include media (xlarge) {
     padding-left: 300px;
@@ -247,5 +242,118 @@
 }
 
 .video-card {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.books-programs {
+  padding-top: 100px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+
+  .books-container {
+    position: absolute;
+    background-image: url(https://jeffwalker.com/wp-content/uploads/2018/06/programsbg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+    padding: 80px 0;
+    z-index: -10;
   }
+
+  h1 {
+    text-align: center;
+    text-transform: none;
+    color: #fff;
+    @include proxima(40px);
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .programs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+
+    @include media (xlarge) {
+      padding-left: 200px;
+      padding-right: 200px;
+      flex-direction: row;
+    }
+
+    @include media (large) {
+      padding-left: 100px;
+      padding-right: 100px;
+      flex-direction: row;
+    }
+
+    @include media(medium) {
+      flex-direction: row;
+    }
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.single-program {
+  @include media (xlarge) {
+    width: 32%;
+    height: 500px;
+
+  }
+  @include media (large) {
+    width: 32%;
+    height: 450px;
+
+  }
+  @include media (medium) {
+    width: 32%;
+    height: 460px;
+  }
+  width: 70%;
+  @include media (tiny) {
+    width: 90%;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  height: 400px;
+  margin-bottom: 100px;
+  position: relative;
+
+  .upper-img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+
+    top: -60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .bottom-img {
+    top: 80px;
+    width: 160px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .desc {
+    padding-top: 220px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+  }
+}

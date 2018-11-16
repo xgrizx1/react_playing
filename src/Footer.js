@@ -2,76 +2,157 @@ import React, {Component} from 'react';
 import './App.scss';
 import MenuItem from './Common/MenuItem';
 import {Grid, Row, Col} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 const arr = [
     {
-        name: 'Home', onClick: () => {
-        }
+        name: '30 Day Challenge',
+        onClick: () => {
+        },
     },
     {
-        name: 'About', onClick: () => {
-        }
+        name: 'Book Launches',
+        onClick: () => {
+        },
+    },
+    {name: null},
+    {
+        name: 'Internet Marketing',
+        onClick: () => {
+        },
     },
     {
-        name: 'Books', onClick: () => {
-        }
+        name: 'Mindset',
+        onClick: () => {
+        },
+    },
+    {name: null},
+
+    {
+        name: 'Motivation',
+        onClick: () => {
+        },
     },
     {
-        name: 'Videos', onClick: () => {
-        }
+        name: 'Blogs',
+        onClick: () => {
+        },
+    },
+    {name: null},
+
+    {
+        name: 'Product Launches',
+        onClick: () => {
+        },
     },
     {
-        name: 'Programs', onClick: () => {
-        }
+        name: 'Reader Questions',
+        onClick: () => {
+        },
+    },
+    {name: null},
+
+    {
+        name: 'Strategy',
+        onClick: () => {
+        },
     },
     {
-        name: 'Blogs', onClick: () => {
-        }
+        name: 'Website Traffic',
+        onClick: () => {
+        },
     },
-    {
-        name: 'Podcasts', onClick: () => {
-        }
-    },
-    {
-        name: 'Contact', onClick: () => {
-        }
-    },
+    {name: null},
 ];
 
 const texts = [
-    {text: "What it's really about", link: "/sdads"},
-    {text: "What it's really about", link: "/sdads"},
-    {text: "What it's really about", link: "/sdads"},
-    {text: "What it's really about", link: "/sdads"},
-    {text: "What it's really about", link: "/sdads"},
+    {text: "What it's really about", link: '/sdads'},
+    {text: "What it's really about", link: '/sdads'},
+    {text: "What it's really about", link: '/sdads'},
+    {text: "What it's really about", link: '/sdads'},
+    {text: "What it's really about", link: '/sdads'},
 ];
-
 
 const Footer = () => (
     <div className="Footer">
+        <div className="Footer-image"/>
         <div className="Footer-container">
-            <div className="Footer-text">{arr.map(i => <MenuItem styles={{fontSize: 12}} name={i.name} onClick={i.onClick()}/>)}</div>
-            <Grid>
-                <Row style={{color: '#fff'}}>
-                    <Col md={4} sm={6}>
-                        <div className="Footer-heading"> JEFF's POSTS</div>
-                        <div style={{paddingTop: 10}}>
-                            {texts.map(line => <Link to="/" className="footer-link">{line.text}</Link>)}
+            <div className="footer-form">
+                <Row style={{alignItems: "center"}}>
+                    <Col sm={3} md={2}>
+                        <img style={{width: '100%'}}
+                             src="https://jeffwalker.com/wp-content/uploads/2018/08/16_rules_white.png"/>
+                    </Col>
+                    <Col sm={9} md={10}>
+                        <div className="footer-form-container">
+                            <div className="footer-form-desc">
+                                Get the <span>behind-the-scenes strategies and secrets</span> used by the world’s most
+                                successful online
+                                entrepreneurs. These are powerful tactics that I’ve used to launch and grow my own
+                                online business… and
+                                they can work for you, too.
+                            </div>
+                            <Row>
+                                <Col md={6}>
+                                    <div className="form-field">
+                                        <input name="name" type="text" placeholder="First Name"/>
+                                    </div>
+                                </Col>
+                                <Col md={6}>
+                                    <div className="form-field">
+                                        <input name="name" type="text" placeholder="Last Name"/>
+                                    </div>
+                                </Col>
+                                <Col md={12}>
+                                    <div className="form-button">
+                                        <button className="button">Send me Strategies now</button>
+                                    </div>
+                                </Col>
+                            </Row>
                         </div>
                     </Col>
-                    <Col md={4} sm={6}>
-                        <div className="Footer-heading"> LATEST TWEET </div>
-                    </Col>
-                    <Col md={4} sm={6} style={{textAlign: 'right'}}>
-                        <div className="Footer-heading" > CONNECT WITH ME </div>
-                        <a href="#" className="fa fafa fa-facebook" />
-                        <a href="#" className="fa fafa fa-twitter" />
-                    </Col>
                 </Row>
-            </Grid>
+            </div>
+            <div className="footer-social">
+                <div className="footer-link-container">
+                    {arr.map((title, i) => (
+                        (title.name === null) ?
+                            <br/>
+                            :
+                            <div className="footer-link">{title.name}</div>
+                    ))}
+                </div>
+                <div className="footer-social-container">
+                    <div className="footer-social-circle">
+                        <div className="social-circle"/>
+                        <div className="social-text">
+                            Connect with me and plf tribe
+                        </div>
+                    </div>
+                    <div className="footer-social-circle">
+                        <div className="social-circle"/>
+                        <div className="social-text">
+                            Connect with me and plf tribe
+                        </div>
+                    </div>
+                    <div className="footer-social-circle">
+                        <div className="social-circle"/>
+                        <div className="social-text">
+                            Connect with me and plf tribe
+                        </div>
+                    </div>
+                    <div className="footer-social-circle">
+                        <div className="social-circle"/>
+                        <div className="social-text">
+                            Connect with me and plf tribe
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div className="footer-last"/>
     </div>
 );
 export default Footer;
