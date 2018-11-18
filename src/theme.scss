@@ -1,4 +1,5 @@
 $blue-theme: #005E9F;
+$blue-color: #01b1ea;
 $grey: #666666;
 $black: #34373a;
 $light-grey: #737d80;
@@ -23,7 +24,7 @@ p {
 
 @font-face {
   font-family: 'proxima';
-  src: url('~/fonts/ProximaNova.ttf');
+  src: url('~/fonts/ProximaNova.otf');
 }
 
 @font-face {
@@ -58,6 +59,11 @@ p {
 @font-face {
   font-family: 'georgia';
   src: url('~/fonts/Georgia.ttf');
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('~/fonts/Montserrat.otf');
 }
 
 .button {
