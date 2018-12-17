@@ -1,0 +1,72 @@
+@import "../theme.scss";
+
+.contact-container {
+  .contact-overlay {
+    background: url(https://jeffwalker.com/wp-content/uploads/2018/06/contactbg.jpg) center center;
+    background-size: cover;
+    height: 400px;
+    @include media(small) {
+      height: 500px;
+    }
+
+    @include media(tiny) {
+      height: 500px;
+    }
+    width: 100%;
+    position: absolute;
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+  }
+
+  .contact-overlay-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: 400px;
+    @include media(small) {
+      height: 500px;
+      flex-direction: column;
+    }
+
+    @include media(tiny) {
+      height: 500px;
+      flex-direction: column;
+    }
+    z-index: -10;
+    max-width: 800px;
+
+    .title {
+      font-family: "proxima-bold";
+      font-size: 60px;
+      color: white;
+      position: relative;
+      @include media(medium) {
+        font-size: 40px;
+      }
+      @include media(small) {
+        color: $black;
+      }
+      @include media(tiny) {
+        color: $black;
+      }
+    }
+
+    .jeff-overlay {
+      width: 300px;
+      height: 400px;
+      z-index: 100000;
+      position: relative;
+    }
+    margin-bottom: 50px;
+  }
+
+  .about {
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "proxima";
+    font-size: 16px;
+    padding-bottom: 50px;
+  }
+}
