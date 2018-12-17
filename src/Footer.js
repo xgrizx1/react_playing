@@ -96,12 +96,12 @@ const Footer = () => (
                             <Row>
                                 <Col md={6}>
                                     <div className="form-field">
-                                        <input name="name" type="text" placeholder="First Name"/>
+                                        <input name="name" type="text" placeholder="Name"/>
                                     </div>
                                 </Col>
                                 <Col md={6}>
                                     <div className="form-field">
-                                        <input name="name" type="text" placeholder="Last Name"/>
+                                        <input name="name" type="text" placeholder="Email"/>
                                     </div>
                                 </Col>
                                 <Col md={12}>

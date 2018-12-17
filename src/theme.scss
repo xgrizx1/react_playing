@@ -138,6 +138,8 @@ input::-moz-placeholder {
 
 .form-field {
   padding-right: 2px;
+    border: 0;
+
   @include media (medium) {
   }
   input {
@@ -145,6 +147,9 @@ input::-moz-placeholder {
     height: 40px;
     margin: 4px;
   }
+}
+
+.line-form {
 }
 
 

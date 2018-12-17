@@ -2,7 +2,8 @@
 
 .contact-container {
   .contact-overlay {
-    background: url(https://jeffwalker.com/wp-content/uploads/2018/06/contactbg.jpg) center center;
+    background: url(https://jeffwalker.com/wp-content/uploads/2018/06/contactbg.jpg)
+      center center;
     background-size: cover;
     height: 400px;
     @include media(small) {
@@ -14,7 +15,8 @@
     }
     width: 100%;
     position: absolute;
-    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+      box-shadow 0.3s;
   }
 
   .contact-overlay-container {
@@ -62,11 +64,213 @@
   }
 
   .about {
+    text-align: center;
     height: 100%;
     max-width: 800px;
     margin: 0 auto;
     font-family: "proxima";
     font-size: 16px;
     padding-bottom: 50px;
+  }
+
+  .message-form-container {
+    max-width: 900px;
+    min-height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include media(small) {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+
+    @include media(tiny) {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .message-form {
+      @include media(medium) {
+        width: 100%;
+      }
+      @include media(large) {
+        width: 100%;
+      }
+      @include media(xlarge) {
+        width: 100%;
+      }
+      padding: 30px;
+      box-shadow: 1px 1px 51px #a1aeb3d4;
+      max-width: 600px;
+      margin: 20px;
+      max-height: 500px;
+    }
+
+    .mailing-address {
+      margin: 20px;
+      max-width: 200px;
+      h5 {
+        color: $blue-theme;
+        font-weight: bold;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  input {
+    font-size: 16px;
+    @include media(small) {
+      font-size: 14px;
+    }
+    @include media(tiny) {
+      font-size: 14px;
+    }
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+  }
+  input:focus {
+    outline: none;
+  }
+
+  label {
+    @include media(small) {
+      font-size: 14px;
+    }
+    @include media(tiny) {
+      font-size: 12px;
+    }
+    color: #999;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    @include media(tiny) {
+      font-size: 12px;
+    }
+    @include media(small) {
+      font-size: 12px;
+    }
+    color: $blue-theme;
+  }
+
+  /* BOTTOM BARS ================================= */
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .bar:before,
+  .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: $blue-theme;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  .bar:before {
+    left: 50%;
+  }
+  .bar:after {
+    right: 50%;
+  }
+
+  /* active state */
+  input:focus ~ .bar:before,
+  input:focus ~ .bar:after {
+    width: 50%;
+  }
+
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+  }
+
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from {
+      background: $blue-theme;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @-moz-keyframes inputHighlighter {
+    from {
+      background: $blue-theme;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @keyframes inputHighlighter {
+    from {
+      background: #5264ae;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  @include media(small) {
+    .bar {
+      height: 1px;
+    }
+    .bar:after,
+    .bar:before {
+      height: 1px;
+    }
+  }
+  @include media(tiny) {
+    .bar {
+      height: 1px;
+    }
+    .bar:after,
+    .bar:before {
+      height: 1px;
+    }
   }
 }
